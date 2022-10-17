@@ -106,11 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
-              onPressed: () {
-                setState(() {
-                  _fav = !_fav;
-                });
-              },
+              onPressed: () {},
               iconSize: 50,
               icon: const Icon(Icons.favorite_outline),
               isSelected: _fav,
