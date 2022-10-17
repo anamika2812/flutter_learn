@@ -50,6 +50,7 @@ class AppConst {
   static const String screnargumenttitle = "happy text";
   static const String navigatetext = 'Navigate to screen 5 with pushNamed';
 
+  static const String screentext = "Splash Screen";
   //hint
   static const String emailhint = "email";
   static const String phonehint = 'Phone Number';

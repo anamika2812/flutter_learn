@@ -4,9 +4,9 @@ import 'package:flutter_learn/bloc/bloc_builder.dart';
 import 'package:flutter_learn/modules/signup/view/signupform.dart';
 import 'package:flutter_learn/modules/tutorial/controller/tutorial_bloc.dart';
 import 'package:flutter_learn/utils/helpers/app_const.dart';
-
 import 'package:flutter_learn/utils/helpers/app_style.dart';
 import '../../../utils/helpers/app_color.dart';
+import '../../../utils/helpers/app_preferences/preference.dart';
 import 'tutorial_list.dart';
 
 const int _tutorialbaselimit = 1000;
@@ -182,6 +182,7 @@ class _TutorialPageState extends State<TutorialPage> {
           Center(
             child: TextButton(
               onPressed: () {
+                Preference.setIsTutorialViewed(true);
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const RegisterPage()));
               },

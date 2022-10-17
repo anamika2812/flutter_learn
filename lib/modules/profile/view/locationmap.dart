@@ -22,8 +22,14 @@ class _SimpleMapState extends State<SimpleMap> {
         automaticallyImplyLeading: false,
         title: const Text(AppConst.maps),
       ),
-      body: const GoogleMap(
+      body: GoogleMap(
         initialCameraPosition: _kInitialPosition,
+        markers: Set<Marker>.of({
+          const Marker(
+            markerId: MarkerId("1"),
+            position: _kMapCenter,
+          )
+        }),
       ),
     );
   }
