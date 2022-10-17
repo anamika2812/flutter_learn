@@ -78,4 +78,8 @@ class AppConst {
   static const String type4 = 'Sports';
   static const String type5 = 'Streaming';
   static const String type6 = 'Video';
+
+  static const String moviedescription1 =
+      'Lorem ipsum is placeholder text commonly used in the graphic.';
+  static const String moviedescription2 = 'Does seson2 of NETFLIX';
 }

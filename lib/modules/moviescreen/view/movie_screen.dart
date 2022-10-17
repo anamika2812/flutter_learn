@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/modules/moviescreen/view/movie_model.dart';
 import 'package:flutter_learn/utils/helpers/app_color.dart';
 import 'package:flutter_learn/utils/helpers/app_dimension.dart';
-
 import '../../../utils/helpers/app_const.dart';
 import 'movie_list.dart';
 
@@ -57,16 +56,25 @@ class _MovieScreenPageState extends State<MovieScreenPage> {
         currentIndex: 1,
         selectedItemColor: Colors.red[800],
       ),
-      body: ListView(
-        children: [
-          const SizedBox(height: 10),
-          _buildlhorzentalmovieist(),
-          _movieType(),
-          Divider(
-            thickness: 1,
-            color: AppColors.black.withOpacity(0.2),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: ListView(
+          children: [
+            _buildmovieList(),
+            Divider(
+              height: 24,
+              thickness: 1,
+              color: AppColors.black.withOpacity(0.2),
+            ),
+            _movieType(),
+            Divider(
+              height: 24,
+              thickness: 1,
+              color: AppColors.black.withOpacity(0.2),
+            ),
+            _buildbuzzList(),
+          ],
+        ),
       ),
     );
   }
@@ -74,7 +82,7 @@ class _MovieScreenPageState extends State<MovieScreenPage> {
   Widget _appbarstyle1() {
     return const Text(AppConst.moviebuzz,
         style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: AppDim.size25,
             fontWeight: FontWeight.bold));
   }
@@ -87,23 +95,22 @@ class _MovieScreenPageState extends State<MovieScreenPage> {
         ));
   }
 
-  Widget _buildlhorzentalmovieist() {
-    return SizedBox(
-      height: 200,
-      child: _buildmovieList(),
-    );
-  }
-
   _buildmovieList() {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (context, index) {
-        return Container(
-          margin: const EdgeInsets.symmetric(horizontal: 5.0),
-          child: _buildmovieData(_list[index]),
-        );
-      },
-      itemCount: _list.length,
+    return Padding(
+      padding: const EdgeInsets.only(left: 10.0),
+      child: SizedBox(
+        height: 150,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 5.0),
+              child: _buildmovieData(_list[index]),
+            );
+          },
+          itemCount: _list.length,
+        ),
+      ),
     );
   }
 
@@ -129,7 +136,7 @@ class _MovieScreenPageState extends State<MovieScreenPage> {
         ),
         Expanded(
           child: SizedBox(
-            width: 90,
+            width: 80,
             child: Text(
               list.title,
               style: const TextStyle(
@@ -157,7 +164,7 @@ class _MovieScreenPageState extends State<MovieScreenPage> {
           highlightColor: AppColors.black,
           onTap: () {},
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             margin: const EdgeInsets.all(5),
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(
@@ -176,6 +183,95 @@ class _MovieScreenPageState extends State<MovieScreenPage> {
           ),
         ),
       ).toList(),
+    );
+  }
+
+  _firstColumn() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 100.0),
+      child: Column(
+        children: const [
+          Text(
+            " list.title",
+            style: TextStyle(
+              fontSize: 16,
+              color: AppColors.black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 40,
+          ),
+          CircleAvatar(
+            backgroundImage:
+                NetworkImage('https://picsum.photos/id/1074/400/400'),
+            radius: 15,
+          ),
+        ],
+      ),
+    );
+  }
+
+  _secondColumn() {
+    return Column(
+      children: [
+        IconButton(
+          onPressed: () {},
+          iconSize: 30,
+          icon: const Icon(Icons.bookmark_border_outlined),
+          selectedIcon: const Icon(Icons.bookmark_added),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            IconButton(
+              onPressed: () {},
+              iconSize: 30,
+              icon: const Icon(Icons.favorite_outline),
+              selectedIcon: const Icon(Icons.favorite),
+            ),
+            const Text("8"),
+            IconButton(
+              onPressed: () {},
+              iconSize: 30,
+              icon: const Icon(Icons.share),
+              selectedIcon: const Icon(Icons.share),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  _buildbuzzList() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10.0),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Image.network(
+              'https://picsum.photos/id/1074/400/400',
+              width: 110.0,
+              height: 110.0,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0), // give some padding
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  _firstColumn(),
+                  _secondColumn(),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
