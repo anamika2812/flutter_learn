@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class AppDim {
   static const double size5 = 5.0;
   static const double size12 = 12.0;
