@@ -145,7 +145,7 @@ class _RegisterPageState extends State<RegisterPage> {
         )
       ],
       decoration: InputDecoration(
-        hintText: 'Name',
+        hintText: AppConst.nameHint,
         contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 30.0),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.0),
@@ -182,7 +182,7 @@ class _RegisterPageState extends State<RegisterPage> {
         )
       ],
       decoration: InputDecoration(
-        hintText: 'Email',
+        hintText: AppConst.emailhint,
         contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 30.0),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.0),
@@ -227,7 +227,7 @@ class _RegisterPageState extends State<RegisterPage> {
             size: 40,
           ),
         ),
-        hintText: 'Phone Number',
+        hintText: AppConst.phonehint,
         contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 30.0),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.0),
