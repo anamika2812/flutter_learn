@@ -58,4 +58,24 @@ class AppConst {
   static const String passwordhint = "email";
 
   static const String nameHint = 'Name';
+
+  //movieScreen
+
+  static const String moviebuzz = 'BUZZ';
+  static const String moviebuzztext =
+      'Discover what\'s treading in entertainment';
+
+  static const String movieList1 = 'Prime movies';
+  static const String movieList2 = 'Netflix movies';
+  static const String movieList3 = 'Peppa Pig Live';
+  static const String movieList4 = 'Prateek Khuhad';
+  static const String movieList5 = 'Prime movies';
+  static const String movieList6 = 'Trending watch';
+
+  static const String type1 = 'Trending';
+  static const String type2 = 'Movie';
+  static const String type3 = 'Event';
+  static const String type4 = 'Sports';
+  static const String type5 = 'Streaming';
+  static const String type6 = 'Video';
 }

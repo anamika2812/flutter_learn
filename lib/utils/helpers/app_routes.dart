@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../modules/moviescreen/view/movie_screen.dart';
 import '../../modules/navigationdemo/screen1.dart';
 import '../../modules/navigationdemo/screen2.dart';
 import '../../modules/navigationdemo/screen3.dart';
@@ -19,6 +20,7 @@ class AppRoutes {
   static const String splashScreen = '/SplashScreen';
   static const String tutorialScreen = '/tutorialScreen';
   static const String signupScreen = '/signupScreen';
+  static const String movieScreen = '/movieScreen';
   static const String profilehomescreen = '/profilehomescreen';
   static const String googleMapScreen = '/googleMapScreen';
 
@@ -34,6 +36,7 @@ class AppRoutes {
       profilehomescreen: (context) => const ProfileScreen(),
       googleMapScreen: (context) => const SimpleMap(),
       splashScreen: (context) => const SplashScreen(),
+      movieScreen: (context) => const MovieScreenPage(),
     };
   }
 }
