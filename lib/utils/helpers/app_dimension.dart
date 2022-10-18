@@ -1,5 +1,6 @@
 class AppDim {
   static const double size5 = 5.0;
+  static const double size10 = 10.0;
   static const double size12 = 12.0;
   static const double size14 = 14.0;
   static const double size16 = 16.0;

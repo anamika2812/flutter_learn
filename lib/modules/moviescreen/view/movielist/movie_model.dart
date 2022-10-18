@@ -1,10 +1,9 @@
 class MovieModal {
-  String title, image, movietype, description;
+  String title, image, movietype;
 
   MovieModal(
     this.title,
     this.image,
     this.movietype,
-    this.description,
   );
 }
