@@ -33,6 +33,8 @@ class _TutorialPageState extends State<TutorialPage> {
   @override
   void dispose() {
     super.dispose();
+    _pageViewController.dispose();
+    _stopTimer();
   }
 
   _pagemove() {
@@ -60,6 +62,12 @@ class _TutorialPageState extends State<TutorialPage> {
     _tutorialBloc.updateIndex(index);
   }
 
+  _onPressTextButton() {
+    Preference.setIsTutorialViewed(true);
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const RegisterPage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder(
@@ -67,15 +75,15 @@ class _TutorialPageState extends State<TutorialPage> {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: GestureDetector(
-            child: Column(
-              children: [_buildpageViewDetails(), _builddotIndicator()],
-            ),
             onLongPressStart: (val) {
               _stopTimer();
             },
             onLongPressEnd: (val) {
               _startTimer();
             },
+            child: Column(
+              children: [_buildpageViewDetails(), _builddotIndicator()],
+            ),
           ),
         ),
       ),
@@ -116,8 +124,7 @@ class _TutorialPageState extends State<TutorialPage> {
     return Image.asset(
       TutorialList.list[_tutorialBloc.state.index].tutorialIcon,
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height / 2,
-      fit: BoxFit.fitWidth,
+      fit: BoxFit.contain,
     );
   }
 
@@ -182,9 +189,7 @@ class _TutorialPageState extends State<TutorialPage> {
           Center(
             child: TextButton(
               onPressed: () {
-                Preference.setIsTutorialViewed(true);
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const RegisterPage()));
+                _onPressTextButton();
               },
               style: const ButtonStyle(
                 alignment: Alignment.centerRight,

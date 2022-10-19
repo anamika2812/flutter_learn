@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      initialRoute: AppRoutes.movieScreen,
+      initialRoute: AppRoutes.animationscreen,
       routes: AppRoutes.getRoutes(),
       // home: const ScreenoneDemo(),
       debugShowCheckedModeBanner: false,

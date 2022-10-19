@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_learn/bloc/bloc_builder.dart';
 import 'package:flutter_learn/modules/signup/controller/signup_bloc.dart';
-import 'package:flutter_learn/modules/signup/view_modal/signup_modal.dart';
 import 'package:flutter_learn/utils/customWidgets/password_textfiled/view/password_textfiled.dart';
 import 'package:flutter_learn/utils/customWidgets/snackbar_screen.dart';
 import 'package:flutter_learn/utils/helpers/app_routes.dart';
 import 'package:flutter_learn/utils/helpers/validation.dart';
 import 'package:flutter_learn/utils/helpers/app_const.dart';
 
+import '../../../utils/customWidgets/custom_appstate.dart';
 import '../../../utils/helpers/app_style.dart';
 
 class RegisterPage extends StatefulWidget {

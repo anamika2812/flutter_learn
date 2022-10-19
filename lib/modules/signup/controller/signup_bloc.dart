@@ -3,6 +3,9 @@ import 'package:flutter_learn/modules/signup/view_modal/signup_modal.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import '../../../utils/customWidgets/custom_appstate.dart';
+import '../../../utils/customWidgets/custom_responsemodal.dart';
+
 class SignupBloc extends Bloc<SignupModel> {
   @override
   SignupModel initDefaultValue() {

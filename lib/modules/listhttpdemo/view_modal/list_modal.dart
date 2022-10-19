@@ -1,10 +1,10 @@
 import '../../../utils/customWidgets/custom_appstate.dart';
 import '../../../utils/customWidgets/custom_responsemodal.dart';
 
-class SignupModel {
+class Listmodel {
   AppState appState;
   ResponseModel? responseModel;
-  SignupModel({
+  Listmodel({
     required this.appState,
     this.responseModel,
   });
