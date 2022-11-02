@@ -41,6 +41,10 @@ dependencies:
   google_maps_flutter: ^2.2.1
   shared_preferences: ^2.0.15
   http: ^0.13.5
+  cloud_firestore: ^3.2.1
+  google_fonts: ^3.0.1
+  flutter_bloc: ^8.0.1
+  kartal: ^2.3.1
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +77,7 @@ flutter:
     - assets/images/tutorial4.jpeg
     - assets/images/movieList1.jpeg
     - assets/images/movielist2.jpeg
+    - assets/images/lists.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

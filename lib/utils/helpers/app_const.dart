@@ -84,4 +84,13 @@ class AppConst {
       'Lorem ipsum is placeholder text commonly used in the graphic.';
   static const String moviedescription2 =
       'Does season2 of Netflix\'s Live up tp the hype?';
+
+  //todo app
+
+  static const String initialText = 'INITIAL STATE';
+  static const String errorText = 'BASE ERROR';
+  static const String addButtonText = 'ADD';
+  static const String collectionPath = 'todos';
+  static const String orderField = 'createdAt';
+  static const String addTodo = "ADD TODO";
 }
