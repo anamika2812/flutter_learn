@@ -21,10 +21,9 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_learn/utils/helpers/app_const.dart';
 
-import 'ToDoAppScreen/bloc/todo_bloc.dart';
-import 'ToDoAppScreen/view/home/home_view/home_view.dart';
+import 'utils/helpers/app_routes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -32,12 +31,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      debugShowCheckedModeBanner: false,
-      home: BlocProvider(
-        create: (context) => TodoBloc()..getAllTodo(),
-        child: HomeView(),
+      title: AppConst.appName,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      routes: AppRoutes.getRoutes(),
+      initialRoute: AppRoutes.todohomescreen,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

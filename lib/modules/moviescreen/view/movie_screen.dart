@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/modules/moviescreen/view/movielist/movie_model.dart';
-import 'package:flutter_learn/modules/moviescreen/view/moviebuzz_list.dart';
+
 import 'package:flutter_learn/utils/helpers/app_color.dart';
 import 'package:flutter_learn/utils/helpers/app_dimension.dart';
 import '../../../utils/helpers/app_const.dart';
+import 'moviebuzz_list.dart';
 import 'movielist/movie_list.dart';
+import 'movielist/movie_model.dart';
 
 class MovieScreenPage extends StatefulWidget {
   const MovieScreenPage({super.key});

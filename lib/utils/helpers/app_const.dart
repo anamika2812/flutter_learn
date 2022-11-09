@@ -87,10 +87,17 @@ class AppConst {
 
   //todo app
 
+  static const String appName = 'TODO App';
   static const String initialText = 'INITIAL STATE';
-  static const String errorText = 'BASE ERROR';
+  static const String errorText = 'No record Find';
   static const String addButtonText = 'ADD';
   static const String collectionPath = 'todos';
+  static const String writetodos = 'Write Todos';
+  static const String edittodos = 'Edit Todos';
   static const String orderField = 'createdAt';
   static const String addTodo = "ADD TODO";
+  static const String editTodo = "EDIT TODO";
+  static const String noData = "No record Find";
+  static const String hintText = 'Write here Content';
+  static const String appBarName = "TODO LIST";
 }

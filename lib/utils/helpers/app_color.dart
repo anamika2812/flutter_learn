@@ -11,4 +11,6 @@ class AppColors {
   static const primary = Colors.purple;
   static const lightgreen = Colors.lightGreen;
   static const deeporange = Colors.deepOrange;
+  static const lightgrey = Colors.lightGreenAccent;
+  static const Color transparent = Colors.transparent;
 }

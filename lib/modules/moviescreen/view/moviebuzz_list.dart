@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/modules/moviescreen/view/moviebuzz/movie_buzz_list.dart';
+
 import 'package:flutter_learn/utils/helpers/app_color.dart';
 import 'package:flutter_learn/utils/helpers/app_dimension.dart';
 
+import 'moviebuzz/movie_buzz_list.dart';
 import 'moviebuzz/movie_buzz_modal.dart';
 
 class MovieBuzzScreen extends StatelessWidget {
